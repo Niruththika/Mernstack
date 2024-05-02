@@ -13,7 +13,11 @@ const userSchema = new Schema(
             required: true
         },
         duration: {
-            type: String,
+            type: Date,
+            required: true
+        },
+        duratione: {
+            type: Date,
             required: true
         }
     },

@@ -49,9 +49,24 @@ function UserFeedBackUpdatePage() {
       </div>
 
       <div className="inputGroup">
-        <label htmlFor="name" className="text-xl mb-2 block text-sm font-medium text-gray-700">First name</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name" name="name" className='w-80 w-[400px] h-[40px] px-2 rounded-lg' autoComplete='off' placeholder='Product name' />
-      </div>
+  <label htmlFor="productName" className="text-xl mb-2 block text-sm font-medium text-gray-700">Product Name</label>
+  <select
+    id="productName"
+    name="productName"
+    onChange={(e) => setName(e.target.value)}
+    value={name}
+    className='w-80 w-[400px] h-[40px] px-2 rounded-lg bg-white'
+  >
+   <option value="">Select a product...</option>
+    <option value="Green Tea">Green Tea</option>
+    <option value="Yellow Tea">Yellow Tea</option>
+    <option value="Arabic Flavour">Arabic Flavour</option>
+    <option value="Black Tea">Black Tea</option>
+    <option value="Jamine Flavour">Jamine Flavour</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
+
 
       <div className="inputGroup">
         <label htmlFor="des" className='text-xl mt-2 block text-sm font-medium text-gray-700'>Review</label>

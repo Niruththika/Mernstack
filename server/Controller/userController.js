@@ -1,13 +1,14 @@
 import add  from "../Models/userModel.js";
 
 export const CreateDetails = async (req, res) => {
-    const { name, des, duration} = req.body;
+    const { name, des, duration,duratione} = req.body;
   
     try{
       const newDetails = new add({
           name,
           des,
           duration,
+          duratione,
       })
       await newDetails.save();
       res.status(201).json({ message: "Details created successfully", data: newDetails });
@@ -56,13 +57,14 @@ export const getOneDetails = async (req, res) => {
 // Update details by ID
 export const updateDetailsById = async (req, res) => {
   const { id } = req.params;
-  const { name, des, duration} = req.body;
+  const { name, des, duration,duratione} = req.body;
 
   try {
       const updatedDetails = await add.findByIdAndUpdate(id, {
         name,
         des,
         duration,
+        duratione,
       }, { new: true });
 
       if (!updatedDetails) {

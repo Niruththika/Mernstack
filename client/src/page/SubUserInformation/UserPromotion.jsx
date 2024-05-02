@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Footer from '../../component/Footer';
-import Navbar from '../../component/Navbar';
+import Navbar from '../../component/Navbarl';
 import { Link } from 'react-router-dom';
 // Import the tea image
 import tea from '../../assets/tea.jpg'; // Adjust the path as per your project structure
@@ -70,6 +70,7 @@ function UserPromotion() {
           <h1 className='font-bold text-pretty text-3xl'>{user.name}</h1>
           <p className='text-xl text-center mt-5'>{user.des}</p>
           <p className='text-center  p-2 text-xl'>{user.duration}</p>
+          <p className='text-center  p-2 text-xl'>{user.duratione}</p>
         </div>
        
       </div>

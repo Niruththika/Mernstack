@@ -59,8 +59,9 @@ import InventryUpdateform from './page/SubInventoryPages/InventrySup/InventryUpd
 import ProductShow from './page/ProductShowPage.jsx'
 import Contact from './page/Contact'
 import About from './page/About'
+import Marketinginfo from './page/OwnerPage/MarketingInfo.jsx'
 
-
+import MarketingDetailsShowpage from './page/SubMarketingPage/MarketingDetailsShowpage.jsx'
 
 
 
@@ -136,6 +137,9 @@ function App() {
     <Route path='/paymentAddMarketing' element={<PaymentAddMarketing/>}/>
     <Route path='/PaymentUpdateMarketing/:id' element={<PaymentUpdateMarketing/>}/>
 
+    
+    <Route path='/Marketinginfo' element={<Marketinginfo/>}/>
+    <Route path='/MarketingDetailsShowpage' element={<MarketingDetailsShowpage/>}/>
 
     </Routes>
     </BrowserRouter>

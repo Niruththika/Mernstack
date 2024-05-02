@@ -51,18 +51,31 @@ function UserFeedBackAddPage() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="adname" className="text-xl mb-2 block text-sm font-medium text-gray-700">Product Name</label>
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        id="adname"
-                        name="adname"
-                        autoComplete='off'
-                        placeholder='Product Name'
-                        className='w-80 w-[400px] h-[40px] px-2 rounded-lg bg-white'
-                    />
-                </div>
+                
+  <label htmlFor="productName" className="text-xl mb-2 block text-sm font-medium text-gray-700">Product Name</label>
+  <select
+    id="productName"
+    name="productName"
+    onChange={(e) => {
+        const selectedProductName = e.target.value;
+        setName(selectedProductName);
+    }}
+    value={name}
+    autoComplete='off'
+    className='w-80 w-[400px] h-[40px] px-2 rounded-lg bg-white'
+  >
+    <option value="">Select a product...</option>
+    <option value="Green Tea">Green Tea</option>
+    <option value="Yellow Tea">Yellow Tea</option>
+    <option value="Arabic Flavour">Arabic Flavour</option>
+    <option value="Black Tea">Black Tea</option>
+    <option value="Jamine Flavour">Jamine Flavour</option>
+    {/* Add more options as needed */}
+  </select>
+
+
+</div>
+
                 <div className="mb-4">
                     <label htmlFor="descript" className="text-xl mb-2 block text-sm font-medium text-gray-700">Review</label>
                     <input

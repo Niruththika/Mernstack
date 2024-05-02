@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { RxUpdate } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Navbar from '../../component/Navbar'
+import Navbar from '../../component/Navbarl'
 import { Link } from 'react-router-dom';
 import userPic from '../../assets/userSh.png'
 import { useNavigate } from "react-router-dom";

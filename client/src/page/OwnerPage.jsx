@@ -23,25 +23,25 @@ function OwnerPage() {
         <div className="flex w-[300px] h-[1200px] bg-lime-900">
           <div className="p-5">
             <button className="w-[230px] h-[40px] bg-gray-500 text-white rounded-2xl text-center my-3">
-              <Link to="/userAccount">User Infor</Link>
+              <Link to="/">User Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/supplierAccount">Supplier Infor</Link>
+              <Link to="/">Supplier Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/inventryProfile">Inventory Infor</Link>
+              <Link to="/">Inventory Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/request">Staff Infor</Link>
+              <Link to="/">Staff Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/request">Shipment Infor</Link>
+              <Link to="/">Shipment Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/request">Promotion Infor</Link>
+              <Link to="/Marketinginfo">Promotion Infor</Link>
             </button>
             <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-              <Link to="/request">Payment Infor</Link>
+              <Link to="/">Payment Infor</Link>
             </button>
           </div>
         </div>

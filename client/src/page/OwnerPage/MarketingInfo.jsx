@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import axios from "axios";
-import Footer from '../component/Footer';
-import Navbar from '../component/Navbarl';
+import Navbar from '../../component/Navbarl';
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import Footer from '../../component/Footer';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import { FaFilePdf } from "react-icons/fa";
 
-function MarketingAccount() {
+function MarketingInfo() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -48,34 +48,50 @@ function MarketingAccount() {
   };
 
   return (
-    <div>
-      <div className=''>
+    <div> 
+
+    <Navbar/>
+    <div className=''>
         {/* Header */}
-        <Navbar />
+       
       </div>
       <div className=''>
         {/* Added green background */}
         <div className='flex flex-row'>
           <div className="flex w-[300px] h-[1200px] bg-lime-900">
+          
             <div className="p-5">
-              <button className="w-[230px] h-[40px] bg-gray-500 text-white rounded-2xl text-center my-3">
-                <Link to="/MarketingProfile">Profile</Link>
-              </button>
-              <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-                <Link to="/MarketingPage">Activity</Link>
-              </button>
-              <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
-                <Link to="/paymentAddMarketing">Payment</Link>
-              </button>
-            </div>
+            <button className="w-[230px] h-[40px] bg-gray-500 text-white rounded-2xl text-center my-3">
+              <Link to="/">User Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/">Supplier Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/">Inventory Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/">Staff Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/">Shipment Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/Marketinginfo">Promotion Infor</Link>
+            </button>
+            <button className="w-[230px] h-[40px] bg-gray-200 rounded-2xl text-center my-3">
+              <Link to="/">Payment Infor</Link>
+            </button>
+          </div>
           </div>
          
           <div className='ml-4 w-full lg:w-3/4 xl:w-4/5'>
-            <div>
+          <div className='ml-4 w-full lg:w-3/4 xl:w-4/5'>
+          <div>
             <button className='bg-yellow-500 text-white py-2 px-4 rounded-md mb-4  ml-3 inline-block' onClick={generatePDF} disabled={users.length === 0}><FaFilePdf /></button> 
             </div>
-            <Link to={"/MarketingAddActivity"} className='bg-green-500 text-white py-2 px-4 rounded-md mb-4 inline-block'>Add Advertisement</Link>
-            <table className="border-collapse border w-full" cellSpacing={0}>
+</div>
+            <table className="border-collapse ml-[100px] border w-[990px]" cellSpacing={0}>
               <thead>
                 <tr className=''>
                   <th className="border border-green-500 px-4 py-2">S.No.</th>
@@ -95,7 +111,7 @@ function MarketingAccount() {
                     <td className="border border-green-500 px-4 py-2">{user.duration}</td>
                     <td className="border border-green-500 px-4 py-2">{user.duratione}</td>
                     <td className='border border-green-500 px-4 py-2'>
-                    <Link to={`/MarketingUpdateActivity/${user._id}`} className="text-green-600 hover:text-green-800">Edit</Link>
+                   
                       <button className="text-red-600 hover:text-red-800 ml-2" onClick={() => deleteReview(user._id)}>Delete</button>
                     </td>
                   </tr>
@@ -110,7 +126,7 @@ function MarketingAccount() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default MarketingAccount;
+export default MarketingInfo

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { RxUpdate } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Navbar from "../../component/Navbar";
+import Navbar from "../../component/Navbarl";
 import { Link } from "react-router-dom";
 import userPic from "../../assets/userSh.png";
 import { useNavigate } from "react-router-dom";
@@ -60,7 +60,7 @@ function MarktingProfilPage() {
         const data = response.data;
         console.log(data);
         alert("User Details created successfully!");
-        navigate("/PaymentInforStaff");
+        navigate("/");
       
       } else {
         throw new Error(response.data || "Failed to create UserDetails");
@@ -90,7 +90,7 @@ function MarktingProfilPage() {
           </div>
 
         <div>
-          <h1 className="text-3xl text-center">Staff Account</h1>
+          <h1 className="text-3xl text-center">Marketing Account</h1>
           <div className="w-[150px] h-[150px]  rounded-full ml-[500px] mt-5 bg-gray-300 pt-3 -mb-[150px]">
             <img
               src={userPic}
@@ -155,7 +155,7 @@ function MarktingProfilPage() {
               </button>
             </form>
 
-            <div className="w-3/4 bg-white rounded p-4">
+             <div className="w-3/4 bg-white rounded p-4">
               <table className="w-full border">
                 <thead>
                   <tr className="bg-gray-200">
@@ -168,7 +168,7 @@ function MarktingProfilPage() {
                 </thead>
                 <tbody>
                   {/* get all data from db */}
-                  {UserProfile.map((profile, index) => (
+                   {UserProfile.map((profile, index) => (
                     <tr key={index}>
                       <td>{profile.name}</td>
                       <td>{profile.email}</td>
@@ -183,7 +183,7 @@ function MarktingProfilPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </div> 
           </div>
         </div>
       </div>

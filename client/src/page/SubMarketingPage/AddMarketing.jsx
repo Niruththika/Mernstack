@@ -7,6 +7,7 @@ function AddMarketing() {
   const [name, setName] = useState("");
   const [des, setDes] = useState("");
   const [duration, setDuration] = useState("");
+  const [duratione, setDuratione] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -19,6 +20,7 @@ function AddMarketing() {
           name,
           des,
           duration,
+          duratione,
         }
       );
 
@@ -55,28 +57,48 @@ function AddMarketing() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="descript" className="block text-gray-700">Description</label>
-          <input type="text" 
-            id="descript" 
-            name="descript" 
-            autoComplete='off' 
-            placeholder='Description' 
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full" 
-            value={des}
-            onChange={(e) => setDes(e.target.value)}
-          />
-        </div>
+  <label htmlFor="descript" className="block text-gray-700">Description</label>
+  <input 
+    type="text" 
+    id="descript" 
+    name="descript" 
+    autoComplete='off' 
+    placeholder='Description' 
+    className="mt-1 p-2 border border-gray-300 rounded-md w-full" 
+    value={des}
+    onChange={(e) => {
+      const inputValue = e.target.value;
+      // Validation to allow only alphanumeric characters and spaces
+      const sanitizedValue = inputValue.replace(/[^a-zA-Z0-9 ]/g, '');
+      setDes(sanitizedValue);
+    }}
+  />
+</div>
+
 
         <div className="mb-4">
-          <label htmlFor="duration" className="block text-gray-700">Duration</label>
+          <label htmlFor="duration" className="block text-gray-700">Start Duration</label>
           <input type="text" 
             id="duration" 
             name="duration" 
             autoComplete='off' 
-            placeholder='Duration' 
+            placeholder='Start Duration' 
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             value={duration}
             onChange={(e) => setDuration(e.target.value)}
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="duration" className="block text-gray-700">End Duration</label>
+          <input type="text" 
+            id="duratione" 
+            name="duration" 
+            autoComplete='off' 
+            placeholder='End Duration' 
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            value={duratione}
+            onChange={(e) => setDuratione(e.target.value)}
           />
         </div>
 
